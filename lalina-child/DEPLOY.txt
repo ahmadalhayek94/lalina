@@ -1,0 +1,64 @@
+LALINA CHILD THEME — DEPLOYMENT GUIDE
+======================================
+"Where Craft Meets Confidence."
+
+HOW TO INSTALL
+--------------
+1. Zip the entire "lalina-child" folder
+2. Go to: WordPress Admin → Appearance → Themes → Add New → Upload Theme
+3. Upload the zip and click Install Now
+4. Click Activate
+5. The theme is live immediately
+
+WHAT THIS THEME DOES
+--------------------
+✦ Complete brand redesign (Noir/Gold/Parchment color system)
+✦ Cormorant Garamond + Jost typography
+✦ Fixes broken product image lazy-load (critical)
+✦ Trust badge strip (Genuine Leather · Worldwide Shipping · 30-Day Returns)
+✦ Social proof bar (4.9★ rating display)
+✦ Sticky mobile Add-to-Cart bar (slides up on scroll)
+✦ Exit-intent popup with 10% off email capture
+✦ Currency auto-detect by visitor IP geolocation
+✦ Stock scarcity indicator ("Only 3 left")
+✦ Size Guide tab on all product pages
+✦ Leather Care Guide tab on all product pages
+✦ "You May Also Love" cross-sell section
+✦ Best Seller badges (auto-tagged at 10+ sales)
+✦ Product schema markup (SEO)
+✦ Open Graph meta tags (social sharing)
+✦ Google Shopping XML feed → lalinabags.com?lalina_feed=1
+✦ Weekly revenue report email (every Monday 7am)
+
+AFTER ACTIVATION — MANUAL STEPS
+---------------------------------
+1. BLOG LINK FIX
+   WP Admin → Appearance → Menus → Footer Menu
+   Find the "Blogs" link → change URL to your blog page URL
+
+2. FLATSOME REGISTRATION
+   WP Admin → Flatsome → Theme Registration
+   Enter your real Envato purchase code
+
+3. REMOVE BLANKET 20% DISCOUNT
+   WP Admin → WooCommerce → Coupons
+   Find any always-active coupon → deactivate or set an expiry date
+
+4. KLAVIYO EMAIL
+   Install Klaviyo plugin → enter API keys
+
+5. GA4 + META PIXEL
+   Install Google Site Kit plugin
+
+6. CURRENCY SWITCHER
+   Install WOOCS (WooCommerce Currency Switcher) plugin
+
+BRAND COLORS
+------------
+Noir Profond  #1A1714
+Lalina Gold   #B8975A
+Parchment     #F7F4EF
+Mahogany      #6B2D2D
+Oat Linen     #D8C9B0
+Slate Taupe   #4A4540
+Champagne     #D4B483
