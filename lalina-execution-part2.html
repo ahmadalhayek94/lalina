@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Lalina $1M Playbook — Part 2: Steps 7–10</title>
+<link href="https://fonts.googleapis.com/css2?family=DM+Mono:ital,wght@0,300;0,400;0,500;1,300&family=Syne:wght@400;500;600;700;800&family=Lora:ital,wght@0,400;1,400&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="part-cover">
+  <div class="gbg"></div>
+  <div class="part-tag">Lalina Bags · $1M Execution System · Part 2 of 3</div>
+  <div class="part-title">Steps <span>7 – 10</span></div>
+  <div class="part-sub">Automation · Daily System · Risk Analysis · Path to $1M</div>
+  <div class="part-nav">
+    <div class="pn-item"><span class="pn-n">07</span><span class="pn-l">Systems & Automation</span></div>
+    <div class="pn-item"><span class="pn-n">08</span><span class="pn-l">Daily Execution System</span></div>
+    <div class="pn-item"><span class="pn-n">09</span><span class="pn-l">Risk & Bottleneck Analysis</span></div>
+    <div class="pn-item"><span class="pn-n">10</span><span class="pn-l">Fastest Path to $1M</span></div>
+  </div>
+</div>
+
+<div class="doc">
+
+<!-- ████ STEP 07 ████ -->
+<div class="ch">
+  <div class="chmeta"><div class="chstep">Step 07</div><div class="chline"></div></div>
+  <div class="chtitle">Systems &amp; <em>Automation Setup</em></div>
+
+  <div class="sec">
+    <div class="sectitle">Complete Klaviyo Email Automation Stack</div>
+    <table class="t">
+      <thead><tr><th>Flow Name</th><th>Trigger</th><th>Email Sequence</th><th>Revenue Impact</th><th>Build Phase</th></tr></thead>
+      <tbody>
+        <tr>
+          <td><strong>Welcome Series</strong></td>
+          <td>Email signup / first visit</td>
+          <td>
+            Email 1 (0hr): Brand story — who Lalina is, why it exists<br>
+            Email 2 (Day 2): Best sellers showcase + social proof<br>
+            Email 3 (Day 5): Leather quality story — "Inside the craft"<br>
+            Email 4 (Day 9): Customer reviews compilation<br>
+            Email 5 (Day 12): 10% off first order (only here, limited)
+          </td>
+          <td>8–12% signup-to-purchase rate</td>
+          <td><span class="tag tg">Build First</span></td>
+        </tr>
+        <tr>
+          <td><strong>Abandoned Cart</strong></td>
+          <td>Add-to-cart without purchase</td>
+          <td>
+            Email 1 (1hr): Gentle reminder — "Your bag is waiting"<br>
+            Email 2 (24hr): Quality focus + one customer review quote<br>
+            Email 3 (72hr): 10% off code YOURS10 — expires in 24hrs
+          </td>
+          <td>15–25% cart recovery rate</td>
+          <td><span class="tag tg">Build First</span></td>
+        </tr>
+        <tr>
+          <td><strong>Post-Purchase</strong></td>
+          <td>Order confirmed</td>
+          <td>
+            Email 1 (0hr): Excitement + what to expect<br>
+            Email 2 (Day 3): Leather care guide — "Keep it beautiful"<br>
+            Email 3 (Day 14): Review request + photo upload ask<br>
+            Email 4 (Day 30): "Complete your set" cross-sell offer
+          </td>
+          <td>+12% repeat purchase within 90 days</td>
+          <td><span class="tag tg">Build First</span></td>
+        </tr>
+        <tr>
+          <td><strong>Browse Abandonment</strong></td>
+          <td>Product view, no add-to-cart</td>
+          <td>
+            Email 1 (4hr): "Still thinking about [product name]?"<br>
+            Email 2 (48hr): Customer review of that specific product
+          </td>
+          <td>4–8% view-to-purchase conversion</td>
+          <td><span class="tag to2">Phase 2</span></td>
+        </tr>
+        <tr>
+          <td><strong>Win-Back</strong></td>
+          <td>No purchase in 90 days</td>
+          <td>
+            Email 1 (Day 90): "We've been thinking about you" + new arrivals<br>
+            Email 2 (Day 97): Curated best sellers for her style<br>
+            Email 3 (Day 104): Final 15% off — "Come back to Lalina"
+          </td>
+          <td>6–10% re-activation rate</td>
+          <td><span class="tag to2">Phase 2</span></td>
+        </tr>
+        <tr>
+          <td><strong>VIP Programme</strong></td>
+          <td>Second purchase completed</td>
+          <td>
+            Email 1: VIP welcome + perks overview<br>
+            Email 2 (Monthly): Early access to new drops — 24hrs before public<br>
+            Email 3 (Quarterly): Exclusive member-only offer
+          </td>
+          <td>+40% LTV per VIP customer</td>
+          <td><span class="tag tb2">Phase 3</span></td>
+        </tr>
+        <tr>
+          <td><strong>Birthday Flow</strong></td>
+          <td>Customer's birthday month</td>
+          <td>
+            Email 1 (Month start): "Happy birthday [name]" + 15% off<br>
+            Email 2 (Day 20 of month): "Last chance — your birthday offer expires"
+          </td>
+          <td>22% redemption rate when personalized</td>
+          <td><span class="tag tb2">Phase 3</span></td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Claude Code — Klaviyo HTML Email Template</div>
+    <div class="panel gl">
+      <div class="plabel">Claude Code Prompt — Abandoned Cart Email 1</div>
+      <p>"Generate a complete responsive HTML email template for Lalina Bags abandoned cart flow Email 1 (1-hour delay). Specs: 600px max-width, background #f7f4ef (parchment), header in #1a1714 (dark) with gold logo text, body font Georgia serif for headlines / Arial for body (email-safe clients), CTA button #b8975a gold background with white uppercase text. Include Klaviyo dynamic variables: {{ first_name }}, {{ event.extra.line_items }}, product image URL, product name, price. Subject line: 'Your bag is waiting, {{ first_name }}.' Preview text: 'You left something beautiful behind.' Output: complete production-ready HTML email code."</p>
+    </div>
+    <div class="code">
+      <div class="codeh">
+        <div class="dots"><div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div></div>
+        <span class="cfile">abandoned-cart-email-1.html (Klaviyo template)</span>
+        <span class="clang">HTML EMAIL</span>
+      </div>
+<pre><span class="cm">&lt;!-- Claude Code generates the full template. Structural example: --&gt;</span>
+<span class="ck">&lt;table</span> <span class="cv">width</span>=<span class="cs">"600"</span> <span class="cv">cellpadding</span>=<span class="cs">"0"</span> <span class="cv">cellspacing</span>=<span class="cs">"0"</span> <span class="cv">bgcolor</span>=<span class="cs">"#f7f4ef"</span><span class="ck">&gt;</span>
+
+  <span class="cm">&lt;!-- HEADER --&gt;</span>
+  <span class="ck">&lt;tr&gt;&lt;td</span> <span class="cv">bgcolor</span>=<span class="cs">"#1a1714"</span> <span class="cv">align</span>=<span class="cs">"center"</span> <span class="cv">style</span>=<span class="cs">"padding:28px"</span><span class="ck">&gt;</span>
+    <span class="ck">&lt;p</span> <span class="cv">style</span>=<span class="cs">"font-family:Georgia;font-size:22px;color:#d2aa5a;letter-spacing:.2em"</span><span class="ck">&gt;</span>
+      LALINA
+    <span class="ck">&lt;/p&gt;&lt;/td&gt;&lt;/tr&gt;</span>
+
+  <span class="cm">&lt;!-- HEADLINE --&gt;</span>
+  <span class="ck">&lt;tr&gt;&lt;td</span> <span class="cv">style</span>=<span class="cs">"padding:40px 48px 20px;font-family:Georgia;
+    font-size:28px;color:#1a1714;font-style:italic;line-height:1.3"</span><span class="ck">&gt;</span>
+    You Have Good Taste,<br>{{ first_name }}.
+  <span class="ck">&lt;/td&gt;&lt;/tr&gt;</span>
+
+  <span class="cm">&lt;!-- BODY --&gt;</span>
+  <span class="ck">&lt;tr&gt;&lt;td</span> <span class="cv">style</span>=<span class="cs">"padding:0 48px 32px;font-family:Arial;
+    font-size:15px;color:#4a4540;line-height:1.75"</span><span class="ck">&gt;</span>
+    <span class="ck">&lt;p&gt;</span>You left something beautiful in your cart.
+      The kind of bag that earns a second glance — 
+      and keeps earning it, year after year.<span class="ck">&lt;/p&gt;</span>
+    <span class="ck">&lt;p&gt;</span>It's still waiting for you. And so are we.<span class="ck">&lt;/p&gt;</span>
+  <span class="ck">&lt;/td&gt;&lt;/tr&gt;</span>
+
+  <span class="cm">&lt;!-- PRODUCT BLOCK (Klaviyo dynamic) --&gt;</span>
+  {% for item in event.extra.line_items %}
+  <span class="ck">&lt;tr&gt;&lt;td</span> <span class="cv">style</span>=<span class="cs">"padding:0 48px 32px"</span><span class="ck">&gt;</span>
+    <span class="ck">&lt;img</span> <span class="cv">src</span>=<span class="cs">"{{ item.image_url }}"</span> <span class="cv">width</span>=<span class="cs">"200"</span> <span class="cv">alt</span>=<span class="cs">"{{ item.title }}"</span><span class="ck">/&gt;</span>
+    <span class="ck">&lt;p&gt;</span>{{ item.title }} — {{ item.price | money }}<span class="ck">&lt;/p&gt;</span>
+  <span class="ck">&lt;/td&gt;&lt;/tr&gt;</span>
+  {% endfor %}
+
+  <span class="cm">&lt;!-- CTA BUTTON --&gt;</span>
+  <span class="ck">&lt;tr&gt;&lt;td</span> <span class="cv">align</span>=<span class="cs">"center"</span> <span class="cv">style</span>=<span class="cs">"padding:0 48px 40px"</span><span class="ck">&gt;</span>
+    <span class="ck">&lt;a</span> <span class="cv">href</span>=<span class="cs">"{{ event.extra.checkout_url }}"</span>
+       <span class="cv">style</span>=<span class="cs">"background:#b8975a;color:#1a1714;font-family:Arial;
+         font-size:11px;letter-spacing:.2em;text-transform:uppercase;
+         padding:14px 36px;display:inline-block;text-decoration:none"</span><span class="ck">&gt;</span>
+      Return to My Bag →
+    <span class="ck">&lt;/a&gt;</span>
+  <span class="ck">&lt;/td&gt;&lt;/tr&gt;</span>
+
+<span class="ck">&lt;/table&gt;</span></pre>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Order Management Automation Architecture</div>
+    <div class="mg mg2">
+      <div class="mc">
+        <div class="ml">WooCommerce + Zapier Triggers</div>
+        <div class="md">
+          <strong style="color:var(--tb);display:block;margin-bottom:5px">Automated Order Workflow:</strong>
+          — Order placed → Klaviyo post-purchase flow trigger<br>
+          — Order shipped → Auto-send tracking email with link<br>
+          — Delivered (Day 3) → Trigger review request email<br>
+          — Review submitted (≥4★) → Auto-publish to product page<br>
+          — Stock hits 5 units → Admin Slack/email alert<br>
+          — Stock hits 0 → Auto-switch to "Notify Me" button<br>
+          — Refund requested → Auto-send return label + instructions<br><br>
+          <strong style="color:var(--tb)">Claude Code task:</strong> "Build all WooCommerce action hooks for the above triggers. Output: complete functions.php snippet with wp_mail notifications and WC status change hooks."
+        </div>
+      </div>
+      <div class="mc">
+        <div class="ml">Customer Support Chatbot (Gorgias / Tidio)</div>
+        <div class="md">
+          <strong style="color:var(--tb);display:block;margin-bottom:5px">Auto-Resolved Support Queries:</strong>
+          — "Where's my order?" → Auto-pull WC tracking link<br>
+          — "How do I return?" → Auto-send returns portal URL<br>
+          — "What size is this?" → Auto-send size guide PDF<br>
+          — "Can I change my colour?" → Policy response + contact link<br>
+          — "Is this real leather?" → Quality + care info block<br>
+          — After-hours → "We reply within 24 hours" acknowledgement<br><br>
+          <strong style="color:var(--tb)">Claude Code prompt:</strong> "Generate a JSON training file for Gorgias AI Support with 30 Q&A pairs in Lalina brand voice (warm, confident, never robotic). Include: shipping, returns, sizing, leather care, order changes."
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Claude Code — Low Stock Alert + Scarcity Display System</div>
+    <div class="code">
+      <div class="codeh">
+        <div class="dots"><div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div></div>
+        <span class="cfile">lalina-stock-system.php</span>
+        <span class="clang">PHP / WORDPRESS</span>
+      </div>
+<pre><span class="cm">// ── Low Stock Alert + "Only X left!" Display ──
+// Claude Code Prompt: "Complete this into a full WooCommerce stock system
+// with admin email alerts at &lt;=5 units and front-end scarcity messages"</span>
+
+<span class="cm">// 1. SCARCITY DISPLAY on product page</span>
+<span class="ck">function</span> <span class="cf">lalina_stock_urgency</span>() {
+  <span class="ck">global</span> <span class="cn">$product</span>;
+  <span class="cn">$stock</span> = <span class="cn">$product</span>-><span class="cf">get_stock_quantity</span>();
+
+  <span class="ck">if</span> (<span class="cn">$stock</span> === <span class="co">null</span>) <span class="ck">return</span>;
+
+  <span class="ck">if</span> (<span class="cn">$stock</span> &lt;= <span class="co">5</span> &amp;&amp; <span class="cn">$stock</span> &gt; <span class="co">0</span>) {
+    <span class="cf">echo</span> <span class="cs">'&lt;p class="lalina-scarcity"&gt;
+      &lt;span class="dot"&gt;●&lt;/span&gt; Only '</span> . <span class="cn">$stock</span> . <span class="cs">' left in this colour
+    &lt;/p&gt;'</span>;
+  }
+}
+<span class="cf">add_action</span>(<span class="cs">'woocommerce_single_product_summary'</span>, <span class="cs">'lalina_stock_urgency'</span>, <span class="co">25</span>);
+
+<span class="cm">// 2. ADMIN EMAIL ALERT on purchase triggers low stock</span>
+<span class="ck">function</span> <span class="cf">lalina_low_stock_alert</span>(<span class="cn">$order_id</span>) {
+  <span class="cn">$order</span> = <span class="cf">wc_get_order</span>(<span class="cn">$order_id</span>);
+  <span class="ck">foreach</span> (<span class="cn">$order</span>-><span class="cf">get_items</span>() <span class="ck">as</span> <span class="cn">$item</span>) {
+    <span class="cn">$product</span> = <span class="cn">$item</span>-><span class="cf">get_product</span>();
+    <span class="cn">$stock</span>   = <span class="cn">$product</span>-><span class="cf">get_stock_quantity</span>();
+    <span class="ck">if</span> (<span class="cn">$stock</span> !== <span class="co">null</span> &amp;&amp; <span class="cn">$stock</span> &lt;= <span class="co">5</span>) {
+      <span class="cf">wp_mail</span>(
+        <span class="cf">get_option</span>(<span class="cs">'admin_email'</span>),
+        <span class="cs">'⚠️ Lalina Low Stock: '</span> . <span class="cn">$product</span>-><span class="cf">get_name</span>(),
+        <span class="cs">'SKU: '</span>.<span class="cn">$product</span>-><span class="cf">get_sku</span>().<span class="cs">' | Stock remaining: '</span>.<span class="cn">$stock</span>
+      );
+    }
+  }
+}
+<span class="cf">add_action</span>(<span class="cs">'woocommerce_order_status_processing'</span>, <span class="cs">'lalina_low_stock_alert'</span>);
+
+<span class="cm">// 3. NOTIFY ME button CSS (add to theme stylesheet)
+// .lalina-scarcity { color: #d84040; font-size: 12px; font-weight: 500; }
+// .lalina-scarcity .dot { animation: pulse 1.5s infinite; }</span></pre>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Claude Code — Affiliate Programme Setup Script</div>
+    <div class="panel gl">
+      <div class="plabel">Claude Code Prompt — Affiliate System</div>
+      <p>"Build a WooCommerce affiliate referral tracking system without a paid plugin. Requirements: unique affiliate link generation (e.g. lalinabags.com?ref=AFFILIATECODE), cookie-based attribution (30-day window), automatic commission calculation at 12% of order value, affiliate dashboard shortcode showing: clicks, conversions, earnings pending, earnings paid. Store data in custom WP database tables. Admin panel to approve/pay affiliates. Output: complete plugin-style PHP file ready to activate."</p>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Retargeting Flow Architecture (Meta + Google)</div>
+    <table class="t">
+      <thead><tr><th>Audience Segment</th><th>Platform</th><th>Creative Type</th><th>Message Angle</th><th>Bid Strategy</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Cart Abandoners (3-day)</strong></td><td>Meta</td><td>Dynamic product ad (DPA) showing exact abandoned item</td><td>"Still thinking? Your bag is still available." — no discount</td><td>Highest value</td></tr>
+        <tr><td><strong>Cart Abandoners (7-day)</strong></td><td>Meta</td><td>Video Reel — bag in lifestyle context</td><td>Social proof + quality angle. No mention of abandonment.</td><td>Highest value</td></tr>
+        <tr><td><strong>Product Viewers (1-day)</strong></td><td>Meta</td><td>Single image — product they viewed</td><td>"Crafted for women who carry everything beautifully."</td><td>Conversions</td></tr>
+        <tr><td><strong>All Site Visitors (14-day)</strong></td><td>Google Display</td><td>Responsive display — product gallery</td><td>Brand recall + new arrivals. Low-cost awareness.</td><td>Target CPA</td></tr>
+        <tr><td><strong>Past Purchasers (90-day)</strong></td><td>Meta + Google</td><td>New collection / complementary product</td><td>"Your Lalina collection isn't complete yet." Cross-sell.</td><td>ROAS</td></tr>
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<!-- ████ STEP 08 ████ -->
+<div class="ch">
+  <div class="chmeta"><div class="chstep">Step 08</div><div class="chline"></div></div>
+  <div class="chtitle">Daily / Weekly <em>Execution System</em></div>
+
+  <div class="sec">
+    <div class="sectitle">Operational Rhythm — Three Cadences</div>
+    <div class="dg">
+      <div class="dc">
+        <div class="dh"><div class="dht">Daily Tasks</div><div class="dhs">Every working day — 60–90 min total</div></div>
+        <ul class="dil">
+          <li class="di">Check Meta Ads Manager: CTR, ROAS, spend vs. budget. Pause any ad set with ROAS &lt; 1.5 after $50 spend.</li>
+          <li class="di">Review Klaviyo dashboard: open rates, click rates, revenue from flows vs. campaigns.</li>
+          <li class="di">Process all new customer reviews: respond to every review within 24 hours (brand voice, warm).</li>
+          <li class="di">Check WooCommerce orders: flag any fulfilment issues, track returns or complaints.</li>
+          <li class="di">Post 1 Instagram Story: product feature, customer repost, or behind-scenes brand moment.</li>
+          <li class="di">Monitor stock levels: reorder any SKU below 20 units to avoid stockouts during ad scaling.</li>
+          <li class="di">Check GA4: session count, bounce rate, top exit pages — identify any sudden UX issues.</li>
+          <li class="di">Reply to all DMs and comments within 4 hours during business hours (brand voice).</li>
+        </ul>
+      </div>
+      <div class="dc">
+        <div class="dh"><div class="dht">Weekly Tasks</div><div class="dhs">Monday or Friday — 3–4 hours</div></div>
+        <ul class="dil">
+          <li class="di">Meta Ads weekly review: identify top-performing creatives, pause bottom 20%, plan next week's tests.</li>
+          <li class="di">Email campaign send: 1 broadcast email per week to full list (new arrivals, editorial, or sale event).</li>
+          <li class="di">Publish 1–2 SEO blog articles (Claude-assisted). Upload to WordPress with proper meta descriptions.</li>
+          <li class="di">Schedule all social content for the coming week (Planoly or Buffer): 7 posts + 10 Stories minimum.</li>
+          <li class="di">Influencer check-in: review this week's gifted creator content. Repost UGC to brand IG. Request usage rights.</li>
+          <li class="di">Review Klaviyo flow performance: identify underperforming emails. A/B test subject lines.</li>
+          <li class="di">Check Google Ads: Search Terms report — add irrelevant search terms as negatives weekly.</li>
+          <li class="di">Weekly revenue report: total revenue, AOV, units sold, top SKUs, conversion rate vs. prior week.</li>
+        </ul>
+      </div>
+      <div class="dc">
+        <div class="dh"><div class="dht">Monthly Tasks</div><div class="dhs">First Monday of month — Half day</div></div>
+        <ul class="dil">
+          <li class="di">Full P&amp;L review: revenue vs. ad spend vs. COGS vs. net margin. Adjust budgets for following month.</li>
+          <li class="di">CRO audit: review conversion rate by page. Identify the one page with the biggest drop-off and fix it.</li>
+          <li class="di">Email list hygiene: suppress unengaged subscribers (no open in 90 days) to protect deliverability.</li>
+          <li class="di">Influencer programme audit: review which creators drove actual sales (UTM tracking). Cut non-performers.</li>
+          <li class="di">Inventory review: stock count vs. sales velocity. Place restock orders with 6-week lead time buffer.</li>
+          <li class="di">New A/B test launch: set up one new CRO test on the highest-traffic product page.</li>
+          <li class="di">SEO ranking check: track keyword positions for top 20 target keywords using Google Search Console.</li>
+          <li class="di">Competitive audit: review 3 competitor brands — pricing, new products, campaigns, positioning changes.</li>
+          <li class="di">Content planning session: plan next month's editorial calendar, campaign themes, and photo needs.</li>
+          <li class="di">Strategic review: compare current month vs. milestone targets. Adjust tactics if off-track.</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Revenue Dashboard — Key Metrics to Track Daily</div>
+    <div class="mg mg4">
+      <div class="mc"><div class="mn">CVR</div><div class="ml">Conversion Rate</div><div class="md">Target: 3.5% at Month 3. Check: GA4 Ecommerce report. Alert if drops below 2.5% — investigate immediately.</div></div>
+      <div class="mc"><div class="mn">AOV</div><div class="ml">Avg. Order Value</div><div class="md">Target: $215+ at Month 3. Tracks whether upsells and bundle offers are working. Low AOV = upsell system broken.</div></div>
+      <div class="mc"><div class="mn">ROAS</div><div class="ml">Return on Ad Spend</div><div class="md">Minimum viable: 2.5. Target: 4.0+. Measure per campaign, per ad set, per creative. Kill anything below 1.8 after $80 spend.</div></div>
+      <div class="mc"><div class="mn">LTV</div><div class="ml">Customer Lifetime Value</div><div class="md">Track: repeat purchase rate (target 22% at 6 months). LTV drives how much you can afford to pay per acquisition.</div></div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Claude Code — Weekly Performance Report Generator</div>
+    <div class="panel gl">
+      <div class="plabel">Claude Code Prompt — Auto-Report System</div>
+      <p>"Build a WooCommerce weekly performance report system that: (1) Runs every Monday at 7am via WP-Cron, (2) Pulls last 7 days: revenue, orders, AOV, top 5 products, conversion rate estimate, (3) Formats as clean HTML email, (4) Sends to admin email automatically. Include comparison to previous 7 days with percentage change indicators (↑ green / ↓ red). Output: complete functions.php code with wp_mail and WC_Order_Query."</p>
+    </div>
+    <div class="code">
+      <div class="codeh">
+        <div class="dots"><div class="dot dr"></div><div class="dot dy"></div><div class="dot dg"></div></div>
+        <span class="cfile">weekly-report.php</span>
+        <span class="clang">PHP</span>
+      </div>
+<pre><span class="cm">// Auto weekly report — Claude Code will complete this fully</span>
+<span class="ck">function</span> <span class="cf">lalina_weekly_report</span>() {
+  <span class="cn">$end</span>   = <span class="ck">new</span> <span class="cf">DateTime</span>();
+  <span class="cn">$start</span> = <span class="ck">new</span> <span class="cf">DateTime</span>(<span class="cs">'-7 days'</span>);
+
+  <span class="cn">$orders</span> = <span class="cf">wc_get_orders</span>([
+    <span class="cs">'date_created'</span> => <span class="cn">$start</span>-><span class="cf">format</span>(<span class="cs">'Y-m-d'</span>).<span class="cs">'...'</span>.<span class="cn">$end</span>-><span class="cf">format</span>(<span class="cs">'Y-m-d'</span>),
+    <span class="cs">'status'</span>       => [<span class="cs">'completed'</span>, <span class="cs">'processing'</span>],
+    <span class="cs">'limit'</span>        => -<span class="co">1</span>,
+  ]);
+
+  <span class="cn">$total</span>  = <span class="cf">array_sum</span>(<span class="cf">array_map</span>(<span class="ck">fn</span>(<span class="cn">$o</span>) => <span class="cn">$o</span>-><span class="cf">get_total</span>(), <span class="cn">$orders</span>));
+  <span class="cn">$count</span>  = <span class="cf">count</span>(<span class="cn">$orders</span>);
+  <span class="cn">$aov</span>    = <span class="cn">$count</span> &gt; <span class="co">0</span> ? <span class="cn">$total</span> / <span class="cn">$count</span> : <span class="co">0</span>;
+
+  <span class="cm">// [Claude Code generates HTML email body with metrics table]</span>
+  <span class="cn">$subject</span> = <span class="cs">'📊 Lalina Weekly Report — $'</span>.<span class="cf">number_format</span>(<span class="cn">$total</span>,<span class="co">2</span>).<span class="cs">' revenue'</span>;
+  <span class="cf">wp_mail</span>(<span class="cf">get_option</span>(<span class="cs">'admin_email'</span>), <span class="cn">$subject</span>, <span class="cm">/* html body */</span> <span class="cs">''</span>);
+}
+
+<span class="cm">// Schedule: every Monday at 7am</span>
+<span class="ck">if</span> (!<span class="cf">wp_next_scheduled</span>(<span class="cs">'lalina_weekly_report_hook'</span>)) {
+  <span class="cn">$monday</span> = <span class="ck">new</span> <span class="cf">DateTime</span>(<span class="cs">'next monday 07:00'</span>);
+  <span class="cf">wp_schedule_event</span>(<span class="cn">$monday</span>-><span class="cf">getTimestamp</span>(), <span class="cs">'weekly'</span>, <span class="cs">'lalina_weekly_report_hook'</span>);
+}
+<span class="cf">add_action</span>(<span class="cs">'lalina_weekly_report_hook'</span>, <span class="cs">'lalina_weekly_report'</span>);</pre>
+    </div>
+  </div>
+</div>
+
+<!-- ████ STEP 09 ████ -->
+<div class="ch">
+  <div class="chmeta"><div class="chstep">Step 09</div><div class="chline"></div></div>
+  <div class="chtitle">Risk &amp; Bottleneck <em>Analysis</em></div>
+
+  <div class="sec">
+    <div class="sectitle">Risk Register — Full Business Threat Matrix</div>
+    <div class="riskw">
+      <div class="rrow rh">
+        <div class="rc">Risk</div>
+        <div class="rc">Severity</div>
+        <div class="rc">Likelihood</div>
+        <div class="rc">Mitigation Strategy</div>
+      </div>
+      <div class="rrow">
+        <div class="rc"><strong>Meta Ads Account Ban / Restriction</strong>Single-channel dependency on paid social</div>
+        <div class="rc"><span class="sH">HIGH</span></div>
+        <div class="rc"><span class="sM">MEDIUM</span></div>
+        <div class="rc">Build email list to 10K+ before heavy Meta scaling. Maintain Google and Pinterest as backup acquisition channels. Never run ads that could trigger policy violations (no before/after, no health claims). Keep a backup ad account ready.</div>
+      </div>
+      <div class="rrow">
+        <div class="rc"><strong>Meta iOS Attribution Degradation</strong>Pixel data accuracy declining post-iOS 14+</div>
+        <div class="rc"><span class="sH">HIGH</span></div>
+        <div class="rc"><span class="sH">HIGH</span></div>
+        <div class="rc">Implement server-side Conversions API (CAPI) alongside pixel. Use UTM parameters on all paid traffic. Cross-reference Meta reported ROAS with GA4 + Klaviyo attributed revenue. Never trust Meta numbers alone.</div>
+      </div>
+      <div class="rrow">
+        <div class="rc"><strong>Stockout During Ad Scaling</strong>Running out of hero SKUs mid-campaign</div>
+        <div class="rc"><span class="sH">HIGH</span></div>
+        <div class="rc"><span class="sM">MEDIUM</span></div>
+        <div class="rc">Maintain 8-week inventory buffer on top 4 SKUs. Set WooCommerce alerts at 20 units. Build supplier relationship for rush reorders. Pause ads immediately when stock hits 10 units — do not sell what you cannot ship.</div>
+      </div>
+      <div class="rrow">
+        <div class="rc"><strong>Supplier Quality Drop or Delay</strong>Leather quality inconsistency or shipment delay</div>
+        <div class="rc"><span class="sH">HIGH</span></div>
+        <div class="rc"><span class="sL">LOW</span></div>
+        <div class="rc">QA every incoming shipment with photo documentation. Build secondary supplier relationship as backup. Never disclose supplier publicly — protects supply chain. Communicate proactively with customers if delays occur.</div>
+      </div>
+      <div class="rrow">
+        <div class="rc"><strong>Brand Copycat / Counterfeit</strong>Cheaper brands copying designs or name</div>
+        <div class="rc"><span class="sM">MEDIUM</span></div>
+        <div class="rc"><span class="sM">MEDIUM</span></div>
+        <div class="rc">Register Lalina trademark in top markets (US, EU, UK). Build strong brand equity through storytelling — story cannot be copied. Document all original design work with dates. Monitor brand name on Amazon, Alibaba quarterly.</div>
+      </div>
+      <div class="rrow">
+        <div class="rc"><strong>Negative Viral Moment</strong>Bad review or complaint goes viral</div>
+        <div class="rc"><span class="sM">MEDIUM</span></div>
+        <div class="rc"><span class="sL">LOW</span></div>
+        <div class="rc">Resolve every single complaint publicly within 4 hours. Have a prepared crisis response template. Prioritize genuine quality — the best protection is a product that truly delivers. Document all returns for quality patterns.</div>
+      </div>
+      <div class="rrow">
+        <div class="rc"><strong>Rising CPM / Ad Costs</strong>Meta CPMs increase 20–40% (seasonally or algorithmically)</div>
+        <div class="rc"><span class="sM">MEDIUM</span></div>
+        <div class="rc"><span class="sH">HIGH</span></div>
+        <div class="rc">Diversify acquisition: email, SEO, Pinterest, affiliates must collectively account for 40%+ of revenue by Month 6. When CPMs spike, shift budget to Google and email reactivation. Improve LTV so you can afford higher CPAs.</div>
+      </div>
+      <div class="rrow">
+        <div class="rc"><strong>Currency / Exchange Rate Volatility</strong>GBP, EUR, AED fluctuations hitting margins</div>
+        <div class="rc"><span class="sL">LOW</span></div>
+        <div class="rc"><span class="sM">MEDIUM</span></div>
+        <div class="rc">Price products with 15% currency buffer in non-USD markets. Review international pricing quarterly. Use Wise or Stripe multi-currency to minimize conversion fees. Consider locking in supplier contracts in a single currency.</div>
+      </div>
+      <div class="rrow">
+        <div class="rc"><strong>Founder Burnout / Bottleneck</strong>Single person managing all operations</div>
+        <div class="rc"><span class="sH">HIGH</span></div>
+        <div class="rc"><span class="sH">HIGH</span></div>
+        <div class="rc">Document all SOPs before hiring. Hire a part-time VA (social scheduling, order support) by Month 3. Hire fractional marketing specialist by Month 6. Automate everything that can be automated before adding headcount.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Critical Operational Bottlenecks</div>
+    <div class="mg mg3">
+      <div class="mc">
+        <div class="ml">Bottleneck 1 — Photography</div>
+        <div class="md"><strong style="color:var(--tb);display:block;margin-bottom:5px">Current State → Risk</strong>Without professional brand photography, paid ads underperform and social content looks amateurish. This is the single biggest creative limiter on growth past $50K/month.<br><br><strong style="color:var(--tb)">Fix:</strong> Commission a brand shoot within 30 days. Budget: $800–2,000. Deliver: 10 lifestyle shots + 5 product-only + 10 detail shots per hero bag. Use for 6+ months across all channels.</div>
+      </div>
+      <div class="mc">
+        <div class="ml">Bottleneck 2 — Founder Time</div>
+        <div class="md"><strong style="color:var(--tb);display:block;margin-bottom:5px">Current State → Risk</strong>If one person manages ads, content, fulfilment, customer support, and strategy simultaneously, all of them suffer. Growth stalls around $15–25K/month without delegation.<br><br><strong style="color:var(--tb)">Fix:</strong> Hire a part-time VA ($400–600/month) for social scheduling and customer support replies by Month 2. This frees 15+ hours/week for revenue-generating activity.</div>
+      </div>
+      <div class="mc">
+        <div class="ml">Bottleneck 3 — Inventory Capital</div>
+        <div class="md"><strong style="color:var(--tb);display:block;margin-bottom:5px">Current State → Risk</strong>Scaling ads requires having inventory ready to ship. Stockouts during a successful campaign are one of the most expensive mistakes in e-commerce — you pay for clicks you can't convert.<br><br><strong style="color:var(--tb)">Fix:</strong> Build a rolling 8-week inventory buffer. Consider a small business line of credit (or Shopify Capital equivalent for WooCommerce) to fund inventory ahead of ad scaling phases.</div>
+      </div>
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Marketing Risk Safeguards</div>
+    <ul class="tl">
+      <li><strong>Never run on one channel:</strong><span>If Meta is 90%+ of your traffic, you are one algorithm update from zero. Build Google, Pinterest, and email to 40% combined before scaling Meta above $200/day.</span></li>
+      <li><strong>Never run without server-side tracking:</strong><span>Claude Code task: "Set up WooCommerce server-side Meta Conversions API (CAPI) integration. Output: complete functions.php code using Meta Business SDK for PHP." Without CAPI, you're flying blind on attribution.</span></li>
+      <li><strong>Never buy fake reviews or fake followers:</strong><span>One credible exposé kills years of brand trust. Lalina's verified photo reviews are a genuine competitive asset. Protect them by keeping them authentic.</span></li>
+      <li><strong>Never discount reactively:</strong><span>If sales slow, the instinct is to offer a sitewide discount. Resist. Instead: improve the ad creative, fix the landing page, or launch a new product angle. Discounts train customers to wait for sales.</span></li>
+    </ul>
+  </div>
+</div>
+
+<!-- ████ STEP 10 ████ -->
+<div class="ch">
+  <div class="chmeta"><div class="chstep">Step 10</div><div class="chline"></div></div>
+  <div class="chtitle">Fastest Path to <em>First $1M</em></div>
+
+  <div class="sec">
+    <div class="sectitle">Month-by-Month Revenue Timeline</div>
+    <div class="timeline">
+
+      <div class="tli">
+        <div class="tlmo">Month 1 — Foundation</div>
+        <div class="tlti">Fix Everything. Convert What's Already Arriving.</div>
+        <div class="tltgt">Target: $3,000 – $6,000 revenue</div>
+        <ul class="tla">
+          <li>Fix image loading failures — this is $0 cost and potentially $3K+ in recovered revenue from existing traffic</li>
+          <li>Rewrite top 5 product descriptions using brand voice system</li>
+          <li>Install Klaviyo: welcome series + abandoned cart flow (3 emails) go live</li>
+          <li>Add trust strip, review ratings, and material story section to homepage</li>
+          <li>Start Meta retargeting only: $30/day targeting site visitors and add-to-carts</li>
+          <li>Remove sitewide blanket discount — replace with genuine first-purchase email offer</li>
+          <li>Key hire: nobody yet. Founder does everything. Document every process.</li>
+          <li>Budget: $900 ad spend. Goal: 16–32 orders. Validate unit economics.</li>
+        </ul>
+      </div>
+
+      <div class="tli">
+        <div class="tlmo">Month 2 — Launch Acquisition</div>
+        <div class="tlti">Paid Ads + Email Engine Go Live</div>
+        <div class="tltgt">Target: $8,000 – $15,000 revenue</div>
+        <ul class="tla">
+          <li>Meta: expand from retargeting to cold traffic — $60/day. Test 3 creatives: lifestyle Reel, product close-up, customer UGC repost</li>
+          <li>Google Shopping: launch product feed and Shopping campaign — $25/day</li>
+          <li>Klaviyo: all 3 priority flows live. Start capturing email subscribers via exit-intent popup</li>
+          <li>Micro-influencer programme launches: gift 8–10 creators. Content starts appearing Week 3+</li>
+          <li>Publish first 2 SEO articles targeting "best leather tote bag" and "Polène alternative"</li>
+          <li>Add sticky mobile ATC bar and cart upsell widget — AOV starts climbing</li>
+          <li>Budget: $2,550 ad spend. Goal: 40–75 orders. Identify top 2 performing SKUs.</li>
+        </ul>
+      </div>
+
+      <div class="tli">
+        <div class="tlmo">Month 3 — Prove the Model</div>
+        <div class="tlti">Hit Consistent $5K Weeks</div>
+        <div class="tltgt">Target: $18,000 – $28,000 revenue</div>
+        <ul class="tla">
+          <li>Meta: scale to $100/day on proven ad sets (ROAS ≥ 3.0). Kill anything below 1.8 ROAS after $80 spend.</li>
+          <li>Launch TikTok account — organic content only this month. Film bag reveals, OOTD, packing videos.</li>
+          <li>Commission brand photography session — this is the creative investment that unlocks the next growth phase</li>
+          <li>Rewrite all 18 product descriptions with new brand voice</li>
+          <li>First flash sale event: 72-hour sale on 2 SKUs only. Drive via email + ads. Test urgency mechanics.</li>
+          <li>Hire part-time VA for social scheduling + customer support replies (10–15 hrs/week, $400–600/month)</li>
+          <li>Budget: $4,200 ad spend. Goal: 90–140 orders. Email list: 2,000+ subscribers.</li>
+        </ul>
+      </div>
+
+      <div class="tli">
+        <div class="tlmo">Month 4 — Accelerate</div>
+        <div class="tlti">Multiply Winners. Crush Bottlenecks.</div>
+        <div class="tltgt">Target: $35,000 – $50,000 revenue</div>
+        <ul class="tla">
+          <li>Meta: $200/day. New creative batch using brand photography assets — expect significant ROAS improvement</li>
+          <li>Launch affiliate programme: recruit 20 fashion micro-affiliates with 12% commission</li>
+          <li>Launch limited-edition colour drop — 100 units, waitlist via email, 48-hour window sells out</li>
+          <li>Pinterest: launch business account. Start scheduling 10 pins/day from existing content library</li>
+          <li>Full Klaviyo email stack complete — browse abandonment and win-back flows now live</li>
+          <li>First press pitch: submit products to 3 fashion gift guides, 2 "best bags" articles for SEO links</li>
+          <li>Budget: $7,000 ad spend. Goal: 175–250 orders. Email revenue: 18%+ of total.</li>
+        </ul>
+      </div>
+
+      <div class="tli">
+        <div class="tlmo">Month 5 — Scale the System</div>
+        <div class="tlti">Every Channel Pulling Its Weight</div>
+        <div class="tltgt">Target: $55,000 – $80,000 revenue</div>
+        <ul class="tla">
+          <li>Meta: $350/day across full funnel (TOFU/MOFU/BOFU). International campaign sets: UK, Germany, UAE</li>
+          <li>Google Ads: add competitor search campaign. Bid on "Polène bag", "leather handbag UK" etc.</li>
+          <li>TikTok ads: launch $30/day with top organic videos as paid creative. Test spark ads.</li>
+          <li>Expand product line: add 2 wallet/cardholder SKUs. Increases catalogue, cross-sell opportunities, AOV.</li>
+          <li>VIP loyalty programme launches for 2+ purchase customers — early access to new drops</li>
+          <li>Email list: 5,000+ subscribers. Revenue from email: 22%+ of total monthly revenue</li>
+          <li>Budget: $12,500 ad spend. Goal: 280–400 orders. Repeat purchase rate: 15%+</li>
+        </ul>
+      </div>
+
+      <div class="tli">
+        <div class="tlmo">Month 6 — The $100K Month</div>
+        <div class="tlti">Hitting Critical Mass</div>
+        <div class="tltgt">Target: $85,000 – $120,000 revenue</div>
+        <ul class="tla">
+          <li>Meta: $500/day. Advantage+ Shopping Campaign tested alongside manual campaigns</li>
+          <li>Hire fractional marketing specialist or email/ads freelancer — founder steps into strategy role</li>
+          <li>Autumn/Winter collection launch: 2–3 new colourways across hero bags. Campaign + PR push.</li>
+          <li>First boutique wholesale inquiry likely at this brand level — evaluate selectively</li>
+          <li>SEO bearing fruit: 3–5 articles ranking on page 1 for target keywords generating organic sales daily</li>
+          <li>Packaging upgrade fully deployed: dark gift box, parchment tissue, wax seal, cotton dust bag</li>
+          <li>Budget: $18,000 ad spend. Goal: 450–650 orders. Email list: 8,000+</li>
+        </ul>
+      </div>
+
+      <div class="tli">
+        <div class="tlmo">Months 7–12 — Path to $1M</div>
+        <div class="tlti">Compound Growth. Owned Channels. Market Authority.</div>
+        <div class="tltgt">Target: $700,000 – $1,000,000+ cumulative by Month 12</div>
+        <ul class="tla">
+          <li>Meta: $800–1,200/day. Proven creative library. Weekly creative refresh cadence.</li>
+          <li>Email: 30%+ of revenue. 12,000+ subscribers. Klaviyo 7-flow stack fully optimised.</li>
+          <li>Organic: SEO driving 1,000+ daily sessions. Instagram 20K+ followers. Pinterest 100K+ monthly viewers.</li>
+          <li>Press: 3+ editorial placements in major fashion publications achieved — PR compounds organically</li>
+          <li>Product line: 25+ SKUs across bags, wallets, and accessories. Higher catalogue = higher LTV.</li>
+          <li>Team: founder + part-time VA + freelance email specialist + social manager = lean $1M operation</li>
+          <li>Brand search volume rising monthly — organic brand awareness reducing dependency on paid ads</li>
+          <li>Total ad budget by Month 12: $40,000–55,000/month with blended ROAS of 4.0+</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">Hiring Roadmap</div>
+    <table class="t">
+      <thead><tr><th>Role</th><th>When to Hire</th><th>Trigger</th><th>Type</th><th>Est. Cost/Month</th></tr></thead>
+      <tbody>
+        <tr><td><strong>Social Media VA</strong></td><td>Month 2–3</td><td>Founder spending >10hrs/week on scheduling + replies</td><td>Part-time, remote</td><td>$400–700</td></tr>
+        <tr><td><strong>Email/Klaviyo Specialist</strong></td><td>Month 4–5</td><td>Email revenue exceeds 20% of total. Flows need optimization.</td><td>Freelance / fractional</td><td>$800–1,500</td></tr>
+        <tr><td><strong>Paid Ads Manager</strong></td><td>Month 5–6</td><td>Meta spend exceeds $200/day. Founder's time better spent on strategy.</td><td>Freelance / agency</td><td>$1,200–2,500</td></tr>
+        <tr><td><strong>Customer Experience Manager</strong></td><td>Month 7–8</td><td>Support volume exceeds 20 tickets/day. Response time slipping.</td><td>Part-time to full-time</td><td>$1,500–2,500</td></tr>
+        <tr><td><strong>Head of Marketing</strong></td><td>Month 10–12</td><td>Revenue consistently above $80K/month. Need strategic ownership.</td><td>Full-time</td><td>$4,000–6,000</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <div class="callout">
+    <div class="cl">The $1M Equation for Lalina Bags</div>
+    <h3>$1,000,000 ÷ $215 avg. order = 4,651 orders<br>4,651 orders ÷ 12 months = 388 orders/month<br>388 orders ÷ 4.0% CVR = 9,700 sessions/month needed</h3>
+    <p>At Month 6, with $18K/month ad spend + organic + email: 9,700 sessions/month is entirely achievable.<br>The math works. The product works. Execute the system.</p>
+  </div>
+
+  <div class="sec">
+    <div class="sectitle">The Non-Negotiable Rules for Getting to $1M</div>
+    <ul class="tl">
+      <li><strong>Fix before you scale:</strong><span>Every dollar spent on ads before fixing the image loading issue, the product descriptions, and the trust elements is 40% wasted. The foundation must be solid before the house is built.</span></li>
+      <li><strong>Email is the profit engine:</strong><span>Build the list from Day 1. At $1M/year, email should generate $250,000–$300,000 of that — with zero ad spend. Every subscriber is an asset you own forever.</span></li>
+      <li><strong>Creative is the competitive advantage:</strong><span>In paid ads, the creative IS the targeting. Better photography and better copy beat better audience targeting every single time. Invest in the creative before increasing spend.</span></li>
+      <li><strong>Never stop reviewing the data:</strong><span>The market will tell you what's working if you listen. The best DTC operators are obsessive about their numbers — not because they love data, but because data tells you where to put the next dollar.</span></li>
+      <li><strong>Brand is the moat:</strong><span>At $1M/year, the brand story, the packaging, the customer reviews, the social following — these are harder to replicate than the product itself. Build them deliberately and protect them aggressively.</span></li>
+    </ul>
+  </div>
+
+</div>
+
+<div class="footer">
+  <span>Lalina Bags · $1M Execution System · Part 2 of 3 · Steps 7–10</span>
+  <span>April 2026 · Claude Code Ready</span>
+</div>
+
+</div><!-- /doc -->
+<script src="scripts.js"></script>
+</body>
+</html>
